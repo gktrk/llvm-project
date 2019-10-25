@@ -38,3 +38,5 @@ add_llvm_tool(dsymutil
 if(APPLE)
   target_link_libraries(dsymutil PRIVATE "-framework CoreFoundation")
 endif(APPLE)
+
+target_link_libraries(dsymutil PRIVATE ${system_libs})
